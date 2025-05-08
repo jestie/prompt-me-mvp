@@ -1,0 +1,451 @@
+/* style.css */
+:root {
+    --primary-color: #007bff; /* A modern blue */
+    --secondary-color: #6c757d; /* A neutral grey */
+    --light-bg: #f8f9fa;
+    --dark-text: #343a40;
+    --light-text: #ffffff;
+    --border-color: #dee2e6;
+    --hover-bg: #e9ecef;
+    --frame-bg: #ffffff;
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --header-height: 60px;
+    --footer-height: 50px;
+    --left-nav-width: 250px;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--light-bg);
+    background-image: url('https://via.placeholder.com/1920x1080.png?text=Prompt.Me+Background'); /* Replace with your image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* Keeps background static during scroll */
+    color: var(--dark-text);
+    display: flex; /* For login overlay centering */
+    align-items: center; /* For login overlay centering */
+    justify-content: center; /* For login overlay centering */
+    min-height: 100vh; /* For login overlay centering */
+}
+
+/* Login Overlay Styling */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Dimmed background */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background-color: var(--frame-bg);
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    text-align: center;
+    width: 350px;
+}
+
+.login-logo {
+    max-width: 100px; /* Adjust as needed based on your logo's aspect ratio */
+    max-height: 50px; /* Adjust as needed */
+    object-fit: contain; /* Ensures logo isn't skewed */
+    margin-bottom: 15px;
+}
+
+.login-box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--primary-color);
+}
+
+.login-box p {
+    margin-bottom: 20px;
+    color: var(--secondary-color);
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: calc(100% - 22px); /* Account for padding */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 10px;
+    min-height: 1em; /* Reserve space to prevent layout shift */
+}
+
+
+/* Main App Styling */
+#app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw; /* Ensure it doesn't exceed viewport */
+    overflow: hidden; /* Prevent scrollbars on body due to fixed elements */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly transparent white over background */
+    backdrop-filter: blur(5px); /* Optional: blur background for readability */
+}
+
+#top-frame {
+    height: var(--header-height);
+    background-color: var(--frame-bg);
+    color: var(--dark-text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 10;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.app-logo {
+    height: 30px; /* Adjust as needed */
+    max-width: 100px; /* Prevent overly wide logos */
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.logo-area span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.user-profile-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px; /* PROFILE DROPDOWN FIX: Increased padding */
+}
+
+#user-greeting {
+    margin-right: 15px;
+    font-size: 0.9em;
+}
+
+#user-profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--border-color);
+    object-fit: cover; /* Ensures icon isn't skewed */
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% - 3px); /* PROFILE DROPDOWN FIX: Overlap slightly */
+    right: 0;
+    background-color: var(--frame-bg);
+    box-shadow: var(--shadow);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 20;
+    min-width: 150px;
+}
+
+.user-profile-area:hover .profile-dropdown,
+.profile-dropdown:hover {
+    display: block;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--dark-text);
+    font-size: 0.9em;
+}
+
+.profile-dropdown a:hover {
+    background-color: var(--hover-bg);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-grow: 1; /* Takes remaining vertical space */
+    overflow: hidden; /* Important for independent scrolling */
+}
+
+#left-frame {
+    width: var(--left-nav-width);
+    background-color: #eef1f5; /* Slightly different bg for left nav */
+    padding: 20px;
+    overflow-y: auto; /* Scroll if content exceeds height */
+    border-right: 1px solid var(--border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#left-frame h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#left-frame ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1; /* Pushes version info to bottom */
+}
+
+#left-frame li button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    color: var(--dark-text);
+    border: 1px solid transparent; /* For hover effect consistency */
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+#left-frame li button:hover {
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    border-color: var(--primary-color);
+}
+#left-frame li button.active { /* Style for active button */
+    background-color: var(--primary-color);
+    color: var(--light-text);
+    font-weight: bold;
+}
+#left-frame li button[data-action="save"] { /* Style for the disabled "Save" button */
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.version-info {
+    margin-top: auto; /* Pushes to the bottom */
+    font-size: 0.8em;
+    color: var(--secondary-color);
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--border-color);
+}
+
+#main-frame {
+    flex-grow: 1; /* Takes remaining horizontal space */
+    background-color: var(--frame-bg);
+    padding: 20px;
+    overflow-y: auto; /* Scroll if content exceeds height */
+    display: flex;
+    flex-direction: column;
+}
+
+.main-frame-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.main-frame-header h2 {
+    margin: 0;
+    color: var(--primary-color);
+}
+
+.sort-options label {
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.sort-options select {
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--border-color);
+    font-size: 0.9em;
+}
+
+.prompt-list-area {
+    flex-grow: 1; /* Takes up available space */
+}
+
+.prompt-item {
+    background-color: #f9f9f9;
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--primary-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    transition: box-shadow 0.2s ease;
+}
+.prompt-item:hover {
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+.prompt-item h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--dark-text);
+}
+.prompt-item-meta {
+    font-size: 0.85em;
+    color: var(--secondary-color);
+    margin-bottom: 10px;
+}
+.prompt-item-meta span {
+    margin-right: 15px;
+}
+.prompt-item-meta .tag {
+    background-color: var(--secondary-color);
+    color: var(--light-text);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-right: 5px; /* Spacing between tags */
+    display: inline-block; /* Ensure tags flow nicely */
+    margin-bottom: 3px; /* Spacing if tags wrap */
+}
+.prompt-item-content {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-height: 100px; /* Limit initial display */
+    overflow: hidden;
+    text-overflow: ellipsis; /* May not work well with multi-line */
+    white-space: pre-wrap; /* Preserve line breaks in prompt content */
+}
+.prompt-item-actions button {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    margin-right: 5px;
+    transition: opacity 0.2s ease;
+}
+.prompt-item-actions button.delete {
+    background-color: #dc3545;
+}
+.prompt-item-actions button:hover {
+    opacity: 0.8;
+}
+
+
+#dynamic-content-area {
+    padding: 20px;
+    border: 1px dashed var(--border-color);
+    border-radius: 4px;
+    background-color: #fdfdfd;
+}
+#dynamic-content-area h3 {
+    margin-top: 0;
+    color: var(--primary-color);
+}
+#dynamic-content-area label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#dynamic-content-area input[type="text"],
+#dynamic-content-area textarea,
+#dynamic-content-area select {
+    width: calc(100% - 22px); /* Account for padding and border */
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+#dynamic-content-area textarea {
+    min-height: 150px;
+    resize: vertical;
+    white-space: pre-wrap; /* Preserve line breaks when editing */
+}
+#dynamic-content-area button[type="submit"],
+#dynamic-content-area button[type="button"] { /* General button styling for forms */
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px; /* Spacing between buttons if multiple */
+}
+#dynamic-content-area button[type="submit"]:hover,
+#dynamic-content-area button[type="button"]:hover {
+    background-color: #0056b3;
+}
+
+#dynamic-content-area input[type="file"] {
+    margin-bottom: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    padding: 8px; /* Some padding for better look */
+    display: block;
+}
+
+
+#bottom-frame {
+    height: var(--footer-height);
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    font-size: 0.85em;
+    border-top: 1px solid #555;
+}
+.rss-feed-placeholder span {
+    margin-left: 10px;
+    opacity: 0.7;
+}
+
+/* Utility */
+.hidden {
+    display: none !important;
+}

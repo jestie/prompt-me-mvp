@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prompt.me - Your Prompt Engineering Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon (optional, good practice) -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+
+    <!-- Login Overlay -->
+    <div id="login-overlay" class="login-overlay">
+        <div class="login-box">
+            <img src="J_dev.png" alt="J_dev Logo" class="login-logo"> <!-- LOGO UPDATED -->
+            <h2>Welcome to prompt.me</h2>
+            <p>Please log in to continue.</p>
+            <input type="text" id="username" placeholder="Username" autocomplete="username">
+            <input type="password" id="password" placeholder="Password" autocomplete="current-password">
+            <div id="mfa-section" style="display: none;">
+                <input type="text" id="mfa-code" placeholder="MFA Code (e.g., 123456)">
+            </div>
+            <button id="login-button">Login / Next</button>
+            <p id="login-error" class="error-message"></p>
+        </div>
+    </div>
+
+    <!-- Main Application Structure (Initially Hidden) -->
+    <div id="app-container" style="display: none;">
+        <header id="top-frame">
+            <div class="logo-area">
+                <img src="J_dev.png" alt="J_dev Logo" class="app-logo"> <!-- LOGO UPDATED -->
+                <span>prompt.me</span>
+            </div>
+            <div class="user-profile-area">
+                <span id="user-greeting">Welcome, User!</span>
+                <img src="https://via.placeholder.com/40x40.png?text=U" alt="User Icon" id="user-profile-icon">
+                <div class="profile-dropdown">
+                    <a href="#" id="profile-link">Profile</a>
+                    <a href="#" id="settings-link">Settings</a>
+                    <a href="#" id="logout-button">Logout</a>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-wrapper">
+            <aside id="left-frame">
+                <h3>Navigation</h3>
+                <ul>
+                    <li><button data-action="create">Create New Prompt</button></li>
+                    <li><button data-action="save" title="Save functionality is part of Create/Edit form">Save Current Prompt (N/A)</button></li>
+                    <li><button data-action="search">Search Prompts</button></li>
+                    <li><button data-action="knowledge">Knowledge Base</button></li>
+                    <li><button data-action="tips">Tips & Tricks</button></li>
+                    <li><button data-action="my-prompts">My Prompts</button></li>
+                </ul>
+                 <div class="version-info">
+                    M²-Squared Concept | v1.0 (Client-Side Demo)
+                </div>
+            </aside>
+
+            <main id="main-frame">
+                <div class="main-frame-header">
+                    <h2 id="main-content-title">Dashboard / My Prompts</h2>
+                    <div class="sort-options">
+                        <label for="sort-by">Sort by:</label>
+                        <select id="sort-by">
+                            <option value="date-desc">Creation Date (Newest)</option>
+                            <option value="date-asc">Creation Date (Oldest)</option>
+                            <option value="tag">Tag (First)</option>
+                            <option value="popularity">Popularity (Most Used)</option>
+                            <option value="alpha-asc">Alphabetical (A-Z)</option>
+                            <option value="alpha-desc">Alphabetical (Z-A)</option>
+                        </select>
+                    </div>
+                </div>
+                <div id="prompt-list-area" class="prompt-list-area">
+                    <!-- Prompts will be dynamically inserted here -->
+                    <p>Your prompts will appear here. Select "My Prompts" or "Search Prompts".</p>
+                </div>
+
+                <!-- Content for other actions will be loaded here -->
+                <div id="dynamic-content-area" style="display:none;">
+                    <!-- e.g., create prompt form, knowledge base content, etc. -->
+                </div>
+            </main>
+        </div>
+
+        <footer id="bottom-frame">
+            <p>&copy; [Current Year] M²-Squared (Concept). All rights reserved. | For advertising and RSS feeds.</p>
+            <div class="rss-feed-placeholder">
+                <!-- Placeholder for RSS feed content -->
+                <span>RSS Feed Item 1 | RSS Feed Item 2 | RSS Feed Item 3</span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
