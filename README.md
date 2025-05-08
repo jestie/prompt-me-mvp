@@ -4,7 +4,7 @@ A client-side web application for managing AI prompts. This is an MVP built with
 
 ## Project From: Application Development Lifecycle Document (ADLD)
 - **Project Title:** prompt.me
-- **Company:** M²-Squared
+- **Company:** Private
 - **Prepared By:** Jestie (Conceptual) / AI Assisted
 - **Version:** 1.0 (Client-Side MVP)
 
