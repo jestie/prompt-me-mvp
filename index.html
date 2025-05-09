@@ -1,3 +1,4 @@
+<!-- Version 1.0.1> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,7 +14,7 @@
     <!-- Login Overlay -->
     <div id="login-overlay" class="login-overlay">
         <div class="login-box">
-            <img src="J_dev.png" alt="J_dev Logo" class="login-logo"> <!-- LOGO UPDATED -->
+            <img src="J_dev.png" alt="J_dev Logo" class="login-logo">
             <h2>Welcome to prompt.me</h2>
             <p>Please log in to continue.</p>
             <input type="text" id="username" placeholder="Username" autocomplete="username">
@@ -30,7 +31,7 @@
     <div id="app-container" style="display: none;">
         <header id="top-frame">
             <div class="logo-area">
-                <img src="J_dev.png" alt="J_dev Logo" class="app-logo"> <!-- LOGO UPDATED -->
+                <img src="J_dev.png" alt="J_dev Logo" class="app-logo">
                 <span>prompt.me</span>
             </div>
             <div class="user-profile-area">
@@ -47,13 +48,15 @@
         <div class="content-wrapper">
             <aside id="left-frame">
                 <h3>Navigation</h3>
-                <ul>
+                <ul id="nav-list">
+                    <li><button data-action="dashboards">Dashboards</button></li>
+                    <li><button data-action="my-prompts">My Prompts</button></li>
                     <li><button data-action="create">Create New Prompt</button></li>
                     <li><button data-action="save" title="Save functionality is part of Create/Edit form">Save Current Prompt (N/A)</button></li>
                     <li><button data-action="search">Search Prompts</button></li>
                     <li><button data-action="knowledge">Knowledge Base</button></li>
                     <li><button data-action="tips">Tips & Tricks</button></li>
-                    <li><button data-action="my-prompts">My Prompts</button></li>
+                    <!-- Admin Panel link will be dynamically added here by script.js -->
                 </ul>
                  <div class="version-info">
                     J-Dev Concept | v1.0 (Client-Side Demo)
@@ -63,37 +66,43 @@
             <main id="main-frame">
                 <div class="main-frame-header">
                     <h2 id="main-content-title">Dashboard / My Prompts</h2>
-                    <div class="sort-options">
-                        <label for="sort-by">Sort by:</label>
-                        <select id="sort-by">
-                            <option value="date-desc">Creation Date (Newest)</option>
-                            <option value="date-asc">Creation Date (Oldest)</option>
-                            <option value="tag">Tag (First)</option>
-                            <option value="popularity">Popularity (Most Used)</option>
-                            <option value="alpha-asc">Alphabetical (A-Z)</option>
-                            <option value="alpha-desc">Alphabetical (Z-A)</option>
-                        </select>
+                    <div class="header-actions">
+                        <div class="sort-options" style="display:none;">
+                            <label for="sort-by">Sort by:</label>
+                            <select id="sort-by">
+                                <option value="date-desc">Creation Date (Newest)</option>
+                                <option value="date-asc">Creation Date (Oldest)</option>
+                                <option value="tag">Tag (First)</option>
+                                <option value="popularity">Popularity (Most Used)</option>
+                                <option value="alpha-asc">Alphabetical (A-Z)</option>
+                                <option value="alpha-desc">Alphabetical (Z-A)</option>
+                            </select>
+                        </div>
+                        <!-- Export options will be dynamically inserted here -->
                     </div>
                 </div>
                 <div id="prompt-list-area" class="prompt-list-area">
-                    <!-- Prompts will be dynamically inserted here -->
                     <p>Your prompts will appear here. Select "My Prompts" or "Search Prompts".</p>
                 </div>
 
-                <!-- Content for other actions will be loaded here -->
                 <div id="dynamic-content-area" style="display:none;">
-                    <!-- e.g., create prompt form, knowledge base content, etc. -->
                 </div>
             </main>
         </div>
 
         <footer id="bottom-frame">
-            <p>&copy; [Current Year] J-Dev (Concept). All rights reserved. | For advertising and RSS feeds.</p>
+            <p>© <span id="current-year"></span> J-Dev (Concept). All rights reserved. | For advertising and RSS feeds.</p>
             <div class="rss-feed-placeholder">
-                <!-- Placeholder for RSS feed content -->
                 <span>RSS Feed Item 1 | RSS Feed Item 2 | RSS Feed Item 3</span>
             </div>
         </footer>
+    </div>
+    
+    <div id="loading-indicator" class="loading-overlay" style="display: none;">
+        <div class="loading-box">
+            <p>Processing, please wait...</p>
+            <div class="spinner"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
