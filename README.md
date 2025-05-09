@@ -37,8 +37,7 @@ A client-side web application for managing AI prompts. This is an MVP built with
 - Real MFA implementation (e.g., Auth0).
 - Cloud storage for prompts.
 - Advanced analytics.
-- Subscription model.
-- And more features outlined in the ADLD.
+- And more features are outlined in the TODO.md.
 
 ## Tech Stack (MVP)
 - HTML5
