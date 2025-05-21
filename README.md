@@ -18,8 +18,10 @@ A client-side web application for managing AI prompts. This is an MVP built with
 
 ## How to Run
 1. Clone or download the repository.
-2. Ensure all files (`index.html`, `style.css`, `script.js`, and `J_dev.png`) are in the same directory.
-3. Open `index.html` in a modern web browser (e.g., Chrome, Firefox, Edge).
+2. Place on a local Web Server, or just run "npx live-server" on a port, and connect, to http(s)://my_local_server/index.html
+3. By just opening the index.html file on a browser, without using a server will not work. 
+4. Ensure all files (`index.html`, `style.css`, `script.js`, and `J_dev.png`) are in the same directory.
+5. Open `index.html` in a modern web browser (e.g., Chrome, Firefox, Edge).
 
 ## Default Login Credentials (Simulated)
 **Option 1:**
