@@ -45,3 +45,6 @@ A client-side web application for managing AI prompts. This is an MVP built with
 - HTML5
 - CSS3 (Flexbox for layout)
 - Vanilla JavaScript (ES6+)
+
+### 📸 App Preview
+![App Screenshot](./images/screenshot.png)
