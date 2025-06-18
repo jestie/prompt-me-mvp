@@ -48,3 +48,7 @@ A client-side web application for managing AI prompts. This is an MVP built with
 
 ### 📸 App Preview
 ![App Screenshot](./images/screenshot.png)
+
+![App Screenshot](./images/screenshot2.png)
+
+![App Screenshot](./images/screenshot3.png)
