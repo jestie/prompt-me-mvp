@@ -1,97 +1,88 @@
-# prompt.me - Your Prompt Engineering Hub - How To Run
+# prompt.me - How To Run the Application
 
-This document provides instructions on how to set up and run the prompt.me client-side application.
+This document provides instructions on how to set up and run the `prompt.me` client-side application, both for local development and for deployment on a web server.
 
-## Prerequisites
+## Overview
 
-*   A modern web browser (e.g., Chrome, Firefox, Edge, Safari).
-*   (Optional, for running locally with full functionality) Node.js and npm (or npx) if you choose to use `live-server` via Node. See "Running the Application" section.
+This application is a "client-side" or "static" web app. This means it runs entirely in your web browser using HTML, CSS, and JavaScript. It does not require a complex backend like Python or PHP to run.
 
-## Application Structure
-
-The application consists of the following core files:
-
-*   `index.html`: The main HTML structure of the application.
-*   `style.css`: Contains all the styling rules.
-*   `script.js`: Handles all the application logic, interactions, and data management (client-side).
-*   `J_dev.png`: Logo image.
-*   `favicon.ico`: (Optional) Application icon.
-*   `/data/` (folder):
-    *   `knowledge_base.json`: Contains the content for the Knowledge Base section.
-    *   `tips_and_tricks.json`: Contains the content for the Tips & Tricks section.
-
-## Running the Application
-
-This application is a client-side demo and relies on browser features like `localStorage` for data persistence and `fetch` for loading local JSON data (for the Knowledge Base and Tips & Tricks sections).
-
-**IMPORTANT: Using a Local Web Server (Recommended for Full Functionality)**
-
-Due to browser security restrictions (CORS policy), directly opening `index.html` from your file system (i.e., via the `file:///` protocol) will prevent certain features from working correctly, specifically the loading of content for the "Knowledge Base" and "Tips & Tricks" sections from their respective JSON files.
-
-To ensure all features work as intended, you **must serve the files using a local web server.** Here are a few easy ways to do this:
-
-**1. Using VS Code Live Server Extension (Easiest if using VS Code):**
-
-   a. Open the project folder in Visual Studio Code.
-   b. If you don't have it already, install the "Live Server" extension by Ritwick Dey from the VS Code Extensions marketplace.
-   c. In the VS Code Explorer, right-click on the `index.html` file.
-   d. Select "Open with Live Server".
-   e. Your default web browser will open automatically, displaying the application (usually at an address like `http://127.0.0.1:5500/index.html`).
-
-**2. Using `live-server` with Node.js (Cross-platform):**
-
-   a. Ensure you have Node.js and npm installed. You can download them from [nodejs.org](https://nodejs.org/).
-   b. Open your terminal or command prompt.
-   c. Navigate to the root directory of the `prompt.me` project (the folder containing `index.html`).
-      ```bash
-      cd path/to/your/prompt.me-client-folder
-      ```
-   d. Run the following command:
-      ```bash
-      npx live-server
-      ```
-      (If `npx` is not available or you prefer to install it globally first: `npm install -g live-server`, then run `live-server`).
-   e. Your default web browser should open, or the terminal will display an address (like `Listening on port 8080`, `Serving "J:\Scripts\Promptme\Prompt.me Client" at http://127.0.0.1:8080`). Open this address in your browser.
-
-**3. Other Local Server Options:**
-
-   *   Python's built-in HTTP server:
-      *   Python 3: `python -m http.server`
-      *   Python 2: `python -m SimpleHTTPServer`
-      (Run this command in the project's root directory and then navigate to `http://localhost:8000` in your browser).
-   *   Many other simple static server tools are available for different platforms and environments.
-
-**Why is a local server needed?**
-Web browsers implement a security feature called the Same-Origin Policy. When you open an HTML file directly using `file:///`, `fetch` requests to other local files (like `data/knowledge_base.json`) are often blocked to prevent malicious scripts from accessing your local file system. Serving the files via `http://localhost` makes the browser treat your project as a legitimate (though local) website, allowing these `fetch` requests to proceed correctly.
-
-## Using the Application
-
-1.  Once the application is running in your browser (via a local server), you will be presented with a login screen.
-2.  Use the following demo credentials:
-    *   **Standard User:**
-        *   Username: `user`
-        *   Password: `password123`
-        *   MFA Code: `123456`
-    *   **Admin User:**
-        *   Username: `admin`
-        *   Password: `secure`
-        *   MFA Code: `654321`
-3.  After logging in, you can navigate through the different sections using the left-hand menu.
-4.  Explore creating, viewing, searching, and managing your prompts.
-5.  Admin users have access to an "Admin Panel" for global settings and audit logs.
-6.  Check out the "Knowledge Base" and "Tips & Tricks" for helpful information.
-
-## Customizing Content
-
-*   **Knowledge Base:** Edit the `data/knowledge_base.json` file to add, remove, or modify articles. Follow the existing JSON structure.
-*   **Tips & Tricks:** Edit the `data/tips_and_tricks.json` file.
-*   **Default Prompts (for new users/admin reset):** Admins can modify the default prompts via the "Admin Panel" > "Global Settings". This data is then stored in `localStorage`.
-
-## Notes
-
-*   This is a client-side demonstration. All data (prompts, user settings, AI settings) is stored in your browser's `localStorage`. Clearing your browser's site data for this application will erase all stored information.
-*   The AI "Improve" feature requires configuration in the "Settings" panel. For local models like Ollama, ensure your Ollama server is running and accessible. For OpenAI, a valid API key is required.
+However, to load its data files (like the Knowledge Base), it **must be served by a web server**. You cannot simply open the `index.html` file from your file explorer.
 
 ---
 
-Happy Prompting!
+## Method 1: Running Locally for Development (on Windows/Mac)
+
+This is the best method for making changes to the code and testing them quickly on your personal computer. Choose one of the options below.
+
+### Option A: Using Visual Studio Code (Easiest)
+
+This is the recommended method for most users.
+
+**1. Install Visual Studio Code:**
+   - Go to the official website: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+   - Download and run the installer for your operating system (Windows or Mac).
+
+**2. Install the "Live Server" Extension:**
+   - Open Visual Studio Code.
+   - Click the "Extensions" icon on the left-hand sidebar (it looks like four squares).
+   - In the search bar, type `Live Server`.
+   - Find the extension by **Ritwick Dey** and click the "Install" button.
+
+**3. Run the Application:**
+   - In VS Code, go to `File > Open Folder...` and select the project's root folder (`Promptme`).
+   - In the VS Code Explorer panel on the left, navigate into the `Prompt.me Client` folder.
+   - Right-click on the `index.html` file inside that folder.
+   - Select **"Open with Live Server"**.
+   - Your default web browser will open automatically to the correct address (e.g., `http://127.0.0.1:5500/Prompt.me%20Client/index.html`).
+
+### Option B: Using Node.js (For Terminal Users)
+
+This is a great alternative if you are comfortable with the command line.
+
+**1. Install Node.js and npm:**
+   - Go to the official website: [https://nodejs.org/](https://nodejs.org/)
+   - Download and install the **LTS (Long Term Support)** version for your operating system. The installer will include both `node` and `npm`.
+   - To verify the installation, open a new terminal (PowerShell on Windows, or Terminal on Mac) and run `node -v` and `npm -v`. You should see version numbers for both.
+
+**2. Run the Application:**
+   - Open a terminal.
+   - Navigate to the project's root directory: `cd path/to/your/Promptme`.
+   - Run the following command. `npx` is a tool that comes with `npm` and runs packages without a global installation.
+     ```bash
+     npx live-server "Prompt.me Client/"
+     ```
+   - This will start the server, and your browser should open automatically. If not, the terminal will give you the address to open (e.g., `Serving "Prompt.me Client/" at http://127.0.0.1:8080`).
+
+---
+
+## Method 2: Deploying to a Web Server (e.g., Synology NAS)
+
+This is the method for making the application accessible on your network. This guide assumes you have already set up your server.
+
+1.  **Upload Files:** Copy all the files and folders from **inside** the `Prompt.me Client` directory to the folder on your web server that is designated as the "web root" or "document root".
+2.  **Configure the Web Server:**
+    *   On a Synology NAS, use the **Web Station** package to create a new **Web Service Portal**.
+    *   Configure this portal to serve **static files**.
+    *   Set the **Document Root** to the folder where you uploaded the files.
+    - Ensure the **HTTP Backend Server** is set to Nginx or Apache.
+    - Ensure that **no script language** (like PHP) is enabled for this portal.
+3.  **Access the Application:** Access the application using the IP address or domain name configured for your web server (e.g., `http://your.nas.ip:port`).
+
+---
+
+## Using the Application
+
+Once the application is running, use the following demo credentials to log in:
+
+- **Standard User:**
+  - Username: `user`
+  - Password: `password123`
+  - MFA Code: `123456`
+- **Admin User:**
+  - Username: `admin`
+  - Password: `secure`
+  - MFA Code: `654321`
+
+### Important Note on Data Storage
+
+This is a client-side demonstration. All of your data (prompts, ratings, settings) is stored in your specific web browser's `localStorage`. **Clearing your browser's site data will erase all your prompts.** Use the Export feature to create backups.
