@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block title %}promptme - Welcome{% endblock %}
+{% block content %}
+  <section class="landing">
+    <h2>Welcome to promptme</h2>
+    <p>Save, organize, and favorite your Gen AI prompts.</p>
+    {% if not current_user.is_authenticated %}
+      <a href="{{ url_for('register') }}" class="btn">Get Started</a>
+      <a href="{{ url_for('login') }}" class="btn">Login</a>
+    {% endif %}
+  </section>
+{% endblock %}

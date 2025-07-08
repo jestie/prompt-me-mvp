@@ -1,0 +1,212 @@
+[
+  {
+      "id": "kb001",
+      "category": "Core Concepts",
+      "title": "What is Prompt Engineering?",
+      "content": [
+          {
+              "type": "paragraph",
+              "text": "Prompt engineering is the process of designing and refining input queries (prompts) to effectively guide Large Language Models (LLMs) like GPT-3, Llama, etc., towards generating desired outputs."
+          },
+          {
+              "type": "paragraph",
+              "text": "It's both an art and a science, involving understanding the model's capabilities, limitations, and how different phrasing can impact the response."
+          },
+          {
+              "type": "heading",
+              "level": 3,
+              "text": "Why is it Important?"
+          },
+          {
+              "type": "list",
+              "items": [
+                  "Improves accuracy and relevance of AI-generated content.",
+                  "Helps control the tone, style, and format of the output.",
+                  "Enables more complex task completion.",
+                  "Reduces trial-and-error when interacting with LLMs."
+              ]
+          }
+      ],
+      "tags": [
+          "introduction",
+          "llm",
+          "basics",
+          "fundamentals"
+      ],
+      "lastUpdated": "2023-11-01T10:00:00Z"
+  },
+  {
+      "id": "kb002",
+      "category": "Prompting Techniques",
+      "title": "Zero-Shot, One-Shot, and Few-Shot Prompting",
+      "content": [
+          {
+              "type": "paragraph",
+              "text": "These techniques refer to the amount of example data provided to the LLM within the prompt itself to guide its response."
+          },
+          {
+              "type": "heading",
+              "level": 4,
+              "text": "Zero-Shot Prompting"
+          },
+          {
+              "type": "paragraph",
+              "text": "You ask the model to perform a task without giving it any prior examples of how to do it. The model relies solely on its pre-training. Example: 'Translate this sentence to French: Hello, world.'"
+          },
+          {
+              "type": "heading",
+              "level": 4,
+              "text": "One-Shot Prompting"
+          },
+          {
+              "type": "paragraph",
+              "text": "You provide a single example of the task within the prompt. This helps the model understand the desired format or context. Example: 'Translate English to French:\nsea otter => loutre de mer\ncheese => ?'"
+          },
+          {
+              "type": "heading",
+              "level": 4,
+              "text": "Few-Shot Prompting"
+          },
+          {
+              "type": "paragraph",
+              "text": "You provide multiple examples (typically 2-5) within the prompt. This often leads to significantly better performance, especially for complex or nuanced tasks, as it gives the model a clearer pattern to follow."
+          }
+      ],
+      "tags": [
+          "techniques",
+          "few-shot",
+          "zero-shot",
+          "one-shot",
+          "examples"
+      ],
+      "lastUpdated": "2023-10-30T15:30:00Z"
+  },
+  {
+      "id": "kb003",
+      "category": "Core Concepts",
+      "title": "Understanding Tokens",
+      "content": [
+          {
+              "type": "paragraph",
+              "text": "Large Language Models process text by breaking it down into smaller units called tokens. Tokens can be words, parts of words (subwords), or even individual characters."
+          },
+          {
+              "type": "paragraph",
+              "text": "For example, the phrase 'prompt engineering' might be tokenized into 'prompt', ' engineer', 'ing'."
+          },
+          {
+              "type": "heading",
+              "level": 3,
+              "text": "Why Tokens Matter:"
+          },
+          {
+              "type": "list",
+              "items": [
+                  "**Context Window:** LLMs have a maximum number of tokens they can consider at once (the context window). Prompts and their responses must fit within this limit.",
+                  "**Cost:** For API-based models, pricing is often based on the number of tokens processed (both input and output).",
+                  "**Model Behavior:** The way text is tokenized can sometimes subtly influence model behavior."
+              ]
+          },
+          {
+              "type": "paragraph",
+              "text": "Being mindful of token counts is crucial when crafting prompts, especially long ones or when expecting lengthy responses."
+          }
+      ],
+      "tags": [
+          "tokens",
+          "llm",
+          "context window",
+          "limits"
+      ],
+      "lastUpdated": "2023-11-02T11:00:00Z"
+  },
+  {
+    "id": "kb004",
+    "category": "Advanced Prompting",
+    "title": "Meta Prompting",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Meta prompting takes prompt optimization to the next level by employing an additional language model to refine and enhance the original prompt. Unlike manual iteration, which can be time-consuming and subjective, meta prompting automates the process of identifying and implementing improvements."
+        },
+        {
+            "type": "paragraph",
+            "text": "This approach leverages the power of LLMs to analyze and optimize prompts, leading to more effective and consistent results."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Typical Process"
+        },
+        {
+            "type": "list",
+            "items": [
+                "**Data Collection:** Gathering a diverse dataset of previous prompt interactions, including both successful and failed examples.",
+                "**Model Input:** Feeding the dataset into a secondary language model (meta-model) trained to analyze prompt performance.",
+                "**Pattern Analysis:** The meta-model identifies commonalities in successful prompts and weaknesses in failed ones.",
+                "**Prompt Generation:** An optimized version of the original prompt is generated based on learned patterns."
+            ]
+        },
+        {
+            "type": "paragraph",
+            "text": "For example, to improve the accuracy of a jailbreak detection model, a meta-prompt might instruct:"
+        },
+        {
+            "type": "paragraph",
+            "text": "\"You are an expert prompt engineer. Below are examples of successful and failed prompts for an AI model tasked with detecting jailbreak attempts. Your job is to generate an improved prompt that increases accuracy.\""
+        },
+        {
+            "type": "paragraph",
+            "text": "Meta prompting is especially useful in dynamic environments where user behavior and data distributions evolve. It enables continuous prompt improvement with minimal manual effort."
+        }
+    ],
+    "tags": [
+        "meta-model",
+        "optimization",
+        "automation",
+        "advanced prompting"
+    ],
+    "lastUpdated": "2025-05-21T09:00:00Z"
+},
+{
+    "id": "kb005",
+    "category": "Advanced Prompting",
+    "title": "Gradient Prompt Optimization",
+    "content": [
+        {
+            "type": "paragraph",
+            "text": "Gradient prompt optimization leverages mathematical principles to refine prompts, treating them as optimizable parameter vectors. This method replaces manual adjustments with structured, data-driven techniques."
+        },
+        {
+            "type": "heading",
+            "level": 3,
+            "text": "Optimization Process"
+        },
+        {
+            "type": "list",
+            "items": [
+                "**Embedding Transformation:** Convert the prompt text into a high-dimensional numerical embedding space.",
+                "**Forward Pass and Evaluation:** Execute test cases and evaluate performance against metrics.",
+                "**Loss Function Computation:** Measure the difference between predicted and target outcomes.",
+                "**Gradient Backpropagation:** Compute and apply gradients to update the embeddings.",
+                "**Embedding to Text Reconstitution:** Convert the optimized embeddings back into natural language."
+            ]
+        },
+        {
+            "type": "paragraph",
+            "text": "This technique is highly effective for tasks that demand fine-tuned prompt performance, offering more precision than human intuition alone."
+        },
+        {
+            "type": "paragraph",
+            "text": "However, gradient-based optimization requires significant computational resources and may not be practical for all applications."
+        }
+    ],
+    "tags": [
+        "gradient",
+        "optimization",
+        "prompt tuning",
+        "advanced prompting"
+    ],
+    "lastUpdated": "2025-05-21T09:00:00Z"
+  }
+]

@@ -1,0 +1,133 @@
+[
+  {
+      "id": "tip001",
+      "title": "Be Specific and Clear in Your Instructions",
+      "content": "The more specific and unambiguous your instructions are, the better the LLM can understand your request and generate the desired output. Instead of 'Write about dogs,' try 'Write a short, heartwarming story (around 200 words) about a loyal golden retriever who helps his elderly owner find his lost keys.'",
+      "category": "Crafting Prompts",
+      "keywords": [
+          "specificity",
+          "clarity",
+          "instructions",
+          "detail"
+      ]
+  },
+  {
+      "id": "tip002",
+      "title": "Iterate and Refine Your Prompts",
+      "content": "Don't expect the perfect result on your very first try. Prompt engineering is an iterative process. Start with a simpler version of your prompt, observe the output, and then gradually refine it. Small changes in wording or structure can often lead to significant improvements in the AI's response.",
+      "category": "Workflow",
+      "keywords": [
+          "iteration",
+          "refinement",
+          "testing",
+          "improvement"
+      ]
+  },
+  {
+      "id": "tip003",
+      "title": "Specify the Desired Output Format",
+      "content": "Clearly tell the model how you want the output to be formatted. For example: 'Provide the answer as a bulleted list,' 'Generate a JSON object with the keys: \"name\", \"email\", and \"city\",' or 'Write the summary in a single paragraph.' This saves you post-processing time.",
+      "category": "Output Control",
+      "keywords": [
+          "format",
+          "json",
+          "list",
+          "structure",
+          "markdown"
+      ]
+  },
+  {
+      "id": "tip004",
+      "title": "Use Role-Playing to Set Context",
+      "content": "Assigning a role to the AI can significantly shape its responses. For instance: 'Act as an expert travel guide. Recommend three off-the-beaten-path destinations in Italy suitable for a solo traveler interested in history and cuisine.' This helps the model adopt the appropriate tone, knowledge, and style.",
+      "category": "Advanced Techniques",
+      "keywords": [
+          "role-playing",
+          "persona",
+          "context",
+          "style"
+      ]
+  },
+  {
+      "id": "tip005",
+      "title": "Experiment with Temperature (If Available)",
+      "content": "The 'temperature' parameter controls the randomness of the AI's output. For creative tasks (e.g., story writing, brainstorming), a higher temperature (e.g., 0.7-1.0) can lead to more diverse and surprising results. For factual, precise, or code-generation tasks, a lower temperature (e.g., 0.0-0.3) is usually better for consistency and accuracy.",
+      "category": "Parameters",
+      "keywords": [
+          "temperature",
+          "creativity",
+          "precision",
+          "randomness"
+      ]
+  },
+  {
+    "id": "tip001",
+    "title": "Be Specific and Clear in Your Instructions",
+    "content": "The more specific and unambiguous your instructions are, the better the LLM can understand your request and generate the desired output. Instead of 'Write about dogs,' try 'Write a short, heartwarming story (around 200 words) about a loyal golden retriever who helps his elderly owner find his lost keys.'",
+    "category": "Crafting Prompts",
+    "keywords": ["specificity", "clarity", "instructions", "detail"]
+},
+{
+    "id": "tip002",
+    "title": "Iterate and Refine Your Prompts",
+    "content": "Don't expect the perfect result on your very first try. Prompt engineering is an iterative process. Start with a simpler version of your prompt, observe the output, and then gradually refine it. Small changes in wording or structure can often lead to significant improvements in the AI's response.",
+    "category": "Workflow",
+    "keywords": ["iteration", "refinement", "testing", "improvement"]
+},
+{
+    "id": "tip003",
+    "title": "Specify the Desired Output Format",
+    "content": "Clearly tell the model how you want the output to be formatted. For example: 'Provide the answer as a bulleted list,' 'Generate a JSON object with the keys: 'name', 'email', and 'city',' or 'Write the summary in a single paragraph.' This saves you post-processing time.",
+    "category": "Output Control",
+    "keywords": ["format", "json", "list", "structure", "markdown"]
+},
+{
+    "id": "tip004",
+    "title": "Use Role-Playing to Set Context",
+    "content": "Assigning a role to the AI can significantly shape its responses. For instance: 'Act as an expert travel guide. Recommend three off-the-beaten-path destinations in Italy suitable for a solo traveler interested in history and cuisine.' This helps the model adopt the appropriate tone, knowledge, and style.",
+    "category": "Advanced Techniques",
+    "keywords": ["role-playing", "persona", "context", "style"]
+},
+{
+    "id": "tip005",
+    "title": "Experiment with Temperature (If Available)",
+    "content": "The 'temperature' parameter controls the randomness of the AI's output. For creative tasks (e.g., story writing, brainstorming), a higher temperature (e.g., 0.7-1.0) can lead to more diverse and surprising results. For factual, precise, or code-generation tasks, a lower temperature (e.g., 0.0-0.3) is usually better for consistency and accuracy.",
+    "category": "Parameters",
+    "keywords": ["temperature", "creativity", "precision", "randomness"]
+},
+{
+    "id": "tip006",
+    "title": "Start with a Role",
+    "content": "Act like [expert] so ChatGPT adopts the right expertise and tone.",
+    "category": "General Tips",
+    "keywords": ["role", "expertise", "tone"]
+},
+{
+    "id": "tip007",
+    "title": "State Your Objective",
+    "content": "Skip pleasantries and begin with a concise mission.",
+    "category": "General Tips",
+    "keywords": ["objective", "mission", "focus"]
+},
+{
+    "id": "tip008",
+    "title": "Tell Who It’s For",
+    "content": "Explain to someone who knows nothing about the topic for clarity.",
+    "category": "Audience Targeting",
+    "keywords": ["audience", "clarity", "beginner"]
+},
+{
+    "id": "tip009",
+    "title": "Use Positive, Direct Commands",
+    "content": "Use action-oriented commands like 'List three reasons' instead of negative phrasing.",
+    "category": "Prompt Structure",
+    "keywords": ["commands", "positive language", "action"]
+},
+{
+    "id": "tip010",
+    "title": "Break Big Tasks into Steps",
+    "content": "Decompose tasks into clear, manageable steps to improve accuracy.",
+    "category": "Task Management",
+    "keywords": ["steps", "clarity", "organization"]
+}
+]

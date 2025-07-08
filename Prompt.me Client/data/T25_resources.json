@@ -1,0 +1,179 @@
+{
+  "prompt_engineering_resources_2025": [
+    {
+      "rank": 1,
+      "name": "Awesome Prompt Engineering",
+      "type": "GitHub Repository",
+      "description": "Comprehensive, hand-curated list of prompt engineering resources, tools, and papers focused on GPT, ChatGPT, PaLM, and more.",
+      "rating": 5
+    },
+    {
+      "rank": 2,
+      "name": "Prompt Engineering Repository",
+      "type": "GitHub Repository",
+      "description": "Popular all-in-one educational repo with tutorials, code, and hands-on guides for all levels; nearly 4,000 stars.",
+      "rating": 5
+    },
+    {
+      "rank": 3,
+      "name": "Prompt Engineering Laboratory",
+      "type": "GitHub Repository",
+      "description": "Repository with code, reference implementations, and demo notebooks for prompt engineering with LLMs, including exploration guides.",
+      "rating": 5
+    },
+    {
+      "rank": 4,
+      "name": "Awesome LLM JSON",
+      "type": "GitHub Repository",
+      "description": "Curated list focused on using LLMs for structured outputs (JSON, XML, YAML), including function calling and guided generation.",
+      "rating": 4.5
+    },
+    {
+      "rank": 5,
+      "name": "Prompt Engineering Datasets",
+      "type": "Prompting Guide",
+      "description": "Central hub for downloadable prompt datasets: ChatGPT, DiffusionDB, Midjourney, P3, PartiPrompts, and more.",
+      "rating": 4.5
+    },
+    {
+      "rank": 6,
+      "name": "LangChain",
+      "type": "Open Source Tool",
+      "description": "Modular framework for building complex prompt workflows with memory and reusable templates; steep learning curve.",
+      "rating": 4.5
+    },
+    {
+      "rank": 7,
+      "name": "OpenPrompt",
+      "type": "Open Source Tool",
+      "description": "Advanced prompt engineering framework with dynamic templates, evaluation metrics, and multi-model support.",
+      "rating": 4.5
+    },
+    {
+      "rank": 8,
+      "name": "PromptLayer",
+      "type": "Open Source Tool",
+      "description": "Enterprise-grade tool for prompt version control, analytics, and monitoring across multiple LLMs.",
+      "rating": 4.5
+    },
+    {
+      "rank": 9,
+      "name": "Agenta",
+      "type": "Open Source Tool",
+      "description": "Tool for prompt versioning, side-by-side LLM comparisons, and fast development cycles.",
+      "rating": 4
+    },
+    {
+      "rank": 10,
+      "name": "PromptAppGPT",
+      "type": "Open Source Tool",
+      "description": "Low-code platform for rapid prototyping and team collaboration on prompt design.",
+      "rating": 4
+    },
+    {
+      "rank": 11,
+      "name": "Prompt Engine",
+      "type": "Open Source Tool",
+      "description": "Focuses on reducing bias and improving prompt precision with real-time feedback and analytics.",
+      "rating": 4
+    },
+    {
+      "rank": 12,
+      "name": "Latitude",
+      "type": "Open Source Tool",
+      "description": "Collaboration-focused tool for building production-ready LLM solutions.",
+      "rating": 4
+    },
+    {
+      "rank": 13,
+      "name": "Microsoft Copilot Prompts",
+      "type": "GitHub Repository",
+      "description": "Official Microsoft repo with prompt examples for Copilot across Word, PowerPoint, Teams, and more.",
+      "rating": 4
+    },
+    {
+      "rank": 14,
+      "name": "Awesome ChatGPT Prompts",
+      "type": "Dataset",
+      "description": "Large, community-driven collection of effective ChatGPT prompts for various tasks.",
+      "rating": 4
+    },
+    {
+      "rank": 15,
+      "name": "Midjourney Prompts",
+      "type": "Dataset",
+      "description": "Dataset of prompts for image generation with Midjourney, useful for creative prompt engineering.",
+      "rating": 4
+    },
+    {
+      "rank": 16,
+      "name": "P3 - Public Pool of Prompts",
+      "type": "Dataset",
+      "description": "Open pool of prompts for benchmarking and experimentation.",
+      "rating": 4
+    },
+    {
+      "rank": 17,
+      "name": "Real Toxicity Prompts",
+      "type": "Dataset",
+      "description": "Dataset for evaluating prompt safety and toxicity in LLM outputs.",
+      "rating": 4
+    },
+    {
+      "rank": 18,
+      "name": "Stable Diffusion Dataset",
+      "type": "Dataset",
+      "description": "Extensive dataset of prompts for Stable Diffusion image generation models.",
+      "rating": 4
+    },
+    {
+      "rank": 19,
+      "name": "PartiPrompts",
+      "type": "Dataset",
+      "description": "Dataset designed for evaluating and developing prompt strategies for Parti models.",
+      "rating": 3.5
+    },
+    {
+      "rank": 20,
+      "name": "WritingPrompts",
+      "type": "Dataset",
+      "description": "Large set of creative writing prompts for LLM fine-tuning and testing.",
+      "rating": 3.5
+    },
+    {
+      "rank": 21,
+      "name": "Krista AI Guide",
+      "type": "Guide",
+      "description": "Review and comparison of prompt engineering guides from OpenAI, Microsoft, and Google, plus Krista’s automated approach.",
+      "rating": 3.5
+    },
+    {
+      "rank": 22,
+      "name": "OpenAI Prompt Engineering Guide",
+      "type": "Guide",
+      "description": "Official best practices and recipes for prompt design and iteration (referenced in multiple guides).",
+      "rating": 3.5
+    },
+    {
+      "rank": 23,
+      "name": "Google Gemini Prompting Guide",
+      "type": "Guide",
+      "description": "Google’s structured guide for prompt design, emphasizing iterative refinement and role/task specificity.",
+      "rating": 3.5
+    },
+    {
+      "rank": 24,
+      "name": "Prompt Engineering Tutorials (Prompt Engineering Repository)",
+      "type": "Tutorial",
+      "description": "In-depth tutorials on techniques like zero-shot, few-shot, chain-of-thought, and role prompting.",
+      "rating": 4
+    },
+    {
+      "rank": 25,
+      "name": "Prompt Zoo (Prompt Engineering Laboratory)",
+      "type": "Collection",
+      "description": "Collection of experiments and pre-built environments for hands-on prompt engineering.",
+      "rating": 4
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+# Virtual Environment
+/venv/
+
+# Python cache
+/__pycache__/
+*.pyc
+
+# Local Database
+/db/database.db
+
+# Environment variables and secrets
+# Never commit API keys or other secrets!
+.env
+
+# Backup folder
+/backup/
+
+# IDE / Editor-specific folders
+/.vscode/
+/frontend/

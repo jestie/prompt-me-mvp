@@ -1,0 +1,1087 @@
+/* version 1.0.1 - (Assuming base version for styles, new additions for KB/Tips) */
+/* style.css */
+:root {
+    /* Light Theme (Default) */
+    --primary-color: #007bff;
+    --secondary-color: #6c757d;
+    --accent-color: #007bff;
+
+    --bg-main: #f8f9fa;
+    --bg-frame: #ffffff;
+    --bg-left-nav: #eef1f5;
+    --bg-login-box: #ffffff;
+    --bg-prompt-item: #f9f9f9;
+    --bg-dynamic-content: #fdfdfd;
+    --bg-hover: #e9ecef;
+    --bg-button-primary: var(--primary-color);
+    --bg-button-delete: #dc3545;
+    --bg-button-ai: #28a745;
+    --bg-button-test: #ffc107; /* Yellow for test button */
+    --bg-dashboard-card: #ffffff;
+    --bg-metric-card: #f1f3f5;
+    --bg-toggle-switch: #ccc;
+    --bg-toggle-switch-checked: var(--primary-color);
+    --bg-loading-box: rgba(255, 255, 255, 0.95);
+    --bg-admin-section: #f0f0f0;
+    --bg-audit-log-entry: #f9f9f9;
+    --bg-audit-log-header: #e9ecef;
+    --bg-connection-status-success: #d4edda;
+    --bg-connection-status-error: #f8d7da;
+    --bg-connection-status-neutral: #e2e3e5;
+
+
+    --text-primary: #343a40;
+    --text-secondary: #6c757d;
+    --text-light: #ffffff;
+    --text-accent: var(--primary-color);
+    --text-error: red;
+    --text-dashboard-card-icon: var(--primary-color);
+    --text-loading-box: var(--text-primary);
+    --text-button-test: #212529; /* Dark text on yellow */
+    --text-connection-status-success: #155724;
+    --text-connection-status-error: #721c24;
+    --text-connection-status-neutral: #383d41;
+
+
+    --border-color: #dee2e6;
+    --border-prompt-item-left: var(--primary-color);
+    --border-footer-top: #555;
+    --border-dashboard-card: var(--border-color);
+    --border-metric-card: var(--border-color);
+    --border-loading-box: var(--border-color);
+    --border-admin-section: #ccc;
+    --border-audit-log-entry: #ddd;
+    --border-connection-status-success: #c3e6cb;
+    --border-connection-status-error: #f5c6cb;
+    --border-connection-status-neutral: #d6d8db;
+
+
+    --shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --shadow-prompt-item-hover: 0 3px 8px rgba(0,0,0,0.1);
+    --shadow-dashboard-card-hover: 0 4px 12px rgba(0, 0, 0, 0.1);
+    --shadow-loading-box: 0 5px 15px rgba(0, 0, 0, 0.2);
+
+    --app-background: var(--bg-main);
+    --app-text-primary: var(--text-primary);
+    --app-text-secondary: var(--text-secondary);
+
+    --frame-background: var(--bg-frame);
+    --left-nav-background: var(--bg-left-nav);
+    --login-box-background: var(--bg-login-box);
+
+    --interactive-accent-color: var(--accent-color);
+    --button-primary-background: var(--bg-button-primary);
+    --button-primary-text: var(--text-light);
+    --button-delete-background: var(--bg-button-delete);
+    --button-ai-background: var(--bg-button-ai);
+    --button-test-background: var(--bg-button-test);
+    --button-test-text: var(--text-button-test);
+
+
+    --prompt-item-background: var(--bg-prompt-item);
+    --prompt-item-border-left-color: var(--border-prompt-item-left);
+
+    --dynamic-content-background: var(--bg-dynamic-content);
+    --hover-background: var(--bg-hover);
+
+    --app-border-color: var(--border-color);
+    --app-shadow: var(--shadow);
+
+    --header-height: 60px;
+    --footer-height: 50px;
+    --left-nav-width: 250px;
+}
+
+body.dark-theme {
+    /* Dark Theme Overrides */
+    --primary-color: #0d8eff;
+    --secondary-color: #adb5bd;
+    --accent-color: var(--primary-color);
+
+    --bg-main: #121212;
+    --bg-frame: #1e1e1e;
+    --bg-left-nav: #2a2a2a;
+    --bg-login-box: #1e1e1e;
+    --bg-prompt-item: #2c2c2c;
+    --bg-dynamic-content: #252525;
+    --bg-hover: #3a3a3a;
+    --bg-button-primary: var(--primary-color);
+    --bg-button-delete: #c82333;
+    --bg-button-ai: #218838;
+    --bg-button-test: #e0a800;
+    --bg-dashboard-card: #2c2c2c;
+    --bg-metric-card: #333333;
+    --bg-toggle-switch: #555;
+    --bg-toggle-switch-checked: var(--primary-color);
+    --bg-loading-box: rgba(30, 30, 30, 0.95);
+    --bg-admin-section: #282828;
+    --bg-audit-log-entry: #303030;
+    --bg-audit-log-header: #383838;
+    --bg-connection-status-success: #1b4b26;
+    --bg-connection-status-error: #58151c;
+    --bg-connection-status-neutral: #303438;
+
+    --text-primary: #e0e0e0;
+    --text-secondary: #adb5bd;
+    --text-light: #ffffff;
+    --text-accent: var(--primary-color);
+    --text-error: #ff4d4d;
+    --text-dashboard-card-icon: var(--primary-color);
+    --text-loading-box: var(--text-primary);
+    --text-button-test: #ffffff; /* Light text on dark yellow */
+    --text-connection-status-success: #c3e6cb;
+    --text-connection-status-error: #f5c6cb;
+    --text-connection-status-neutral: #d6d8db;
+
+    --border-color: #444444;
+    --border-prompt-item-left: var(--primary-color);
+    --border-footer-top: #333;
+    --border-dashboard-card: #444444;
+    --border-metric-card: #444444;
+    --border-loading-box: #555;
+    --border-admin-section: #404040;
+    --border-audit-log-entry: #484848;
+    --border-connection-status-success: #2f6039;
+    --border-connection-status-error: #7c252f;
+    --border-connection-status-neutral: #495057;
+
+    --shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+    --shadow-prompt-item-hover: 0 3px 8px rgba(255,255,255,0.08);
+    --shadow-dashboard-card-hover: 0 4px 12px rgba(255, 255, 255, 0.08);
+    --shadow-loading-box: 0 5px 15px rgba(255, 255, 255, 0.1);
+
+    --app-background: var(--bg-main);
+    --app-text-primary: var(--text-primary);
+    --app-text-secondary: var(--text-secondary);
+
+    --frame-background: var(--bg-frame);
+    --left-nav-background: var(--bg-left-nav);
+    --login-box-background: var(--bg-login-box);
+
+    --interactive-accent-color: var(--accent-color);
+    --button-primary-background: var(--bg-button-primary);
+    --button-primary-text: var(--text-light);
+    --button-delete-background: var(--bg-button-delete);
+    --button-ai-background: var(--bg-button-ai);
+    --button-test-background: var(--bg-button-test);
+    --button-test-text: var(--text-button-test);
+
+    --prompt-item-background: var(--bg-prompt-item);
+    --prompt-item-border-left-color: var(--border-prompt-item-left);
+
+    --dynamic-content-background: var(--bg-dynamic-content);
+    --hover-background: var(--bg-hover);
+
+    --app-border-color: var(--border-color);
+    --app-shadow: var(--shadow);
+}
+
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--app-background);
+    /* background-image: url('https://via.placeholder.com/1920x1080.png?text=Prompt.Me+Background'); */ 
+    /* Any local image */
+    background-image: url('images/your_local_background_image.jpg'); */ 
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    color: var(--app-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Login Overlay Styling */
+.login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.login-box {
+    background-color: var(--login-box-background);
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: var(--app-shadow);
+    text-align: center;
+    width: 350px;
+}
+
+.login-logo {
+    max-width: 100px;
+    max-height: 50px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+body.dark-theme .login-logo,
+body.dark-theme .app-logo { }
+
+
+.login-box h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: var(--interactive-accent-color);
+}
+
+.login-box p {
+    margin-bottom: 20px;
+    color: var(--app-text-secondary);
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--app-border-color);
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: var(--frame-background);
+    color: var(--app-text-primary);
+}
+body.dark-theme .login-box input[type="text"]::placeholder,
+body.dark-theme .login-box input[type="password"]::placeholder {
+    color: var(--app-text-secondary);
+}
+
+
+.login-box button {
+    width: 100%;
+    padding: 12px;
+    background-color: var(--button-primary-background);
+    color: var(--button-primary-text);
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+    background-color: color-mix(in srgb, var(--button-primary-background) 85%, black);
+}
+body.dark-theme .login-box button:hover {
+     background-color: color-mix(in srgb, var(--button-primary-background) 85%, white);
+}
+
+
+.error-message {
+    color: var(--text-error);
+    font-size: 0.9em;
+    margin-top: 10px;
+    min-height: 1em;
+}
+
+
+/* Main App Styling */
+#app-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    max-width: 100vw;
+    overflow: hidden;
+    background-color: color-mix(in srgb, var(--frame-background) 80%, transparent);
+    backdrop-filter: blur(5px);
+}
+
+#top-frame {
+    height: var(--header-height);
+    background-color: var(--frame-background);
+    color: var(--app-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    box-shadow: var(--app-shadow);
+    border-bottom: 1px solid var(--app-border-color);
+    z-index: 10;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+}
+
+.app-logo {
+    height: 30px;
+    max-width: 100px;
+    object-fit: contain;
+    margin-right: 10px;
+}
+
+.logo-area span {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: var(--interactive-accent-color);
+}
+
+.user-profile-area {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+#user-greeting {
+    margin-right: 15px;
+    font-size: 0.9em;
+}
+
+#user-profile-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid var(--app-border-color);
+    object-fit: cover;
+}
+
+.profile-dropdown {
+    display: none;
+    position: absolute;
+    top: calc(100% - 3px);
+    right: 0;
+    background-color: var(--frame-background);
+    box-shadow: var(--app-shadow);
+    border-radius: 4px;
+    overflow: hidden;
+    z-index: 20;
+    min-width: 150px;
+}
+
+.user-profile-area:hover .profile-dropdown,
+.profile-dropdown:hover {
+    display: block;
+}
+
+.profile-dropdown a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--app-text-primary);
+    font-size: 0.9em;
+}
+
+.profile-dropdown a:hover {
+    background-color: var(--hover-background);
+}
+
+.content-wrapper {
+    display: flex;
+    flex-grow: 1;
+    overflow: hidden;
+}
+
+#left-frame {
+    width: var(--left-nav-width);
+    background-color: var(--bg-left-nav);
+    padding: 20px;
+    overflow-y: auto;
+    border-right: 1px solid var(--app-border-color);
+    display: flex;
+    flex-direction: column;
+}
+
+#left-frame h3 {
+    margin-top: 0;
+    color: var(--interactive-accent-color);
+    border-bottom: 1px solid var(--app-border-color);
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+#left-frame ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-grow: 1;
+}
+
+#left-frame li button {
+    display: block;
+    width: 100%;
+    padding: 10px 15px;
+    margin-bottom: 8px;
+    background-color: transparent;
+    color: var(--app-text-primary);
+    border: 1px solid transparent;
+    border-radius: 4px;
+    text-align: left;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+#left-frame li button:hover {
+    background-color: var(--interactive-accent-color);
+    color: var(--button-primary-text);
+    border-color: var(--interactive-accent-color);
+}
+#left-frame li button.active {
+    background-color: var(--interactive-accent-color);
+    color: var(--button-primary-text);
+    font-weight: bold;
+}
+#left-frame li button[data-action="save"] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+#left-frame li button#admin-panel-link { /* Specific style for admin link icon */
+    /* Could add specific icon color or weight if needed */
+}
+
+.version-info {
+    margin-top: auto;
+    font-size: 0.8em;
+    color: var(--app-text-secondary);
+    text-align: center;
+    padding-top: 15px;
+    border-top: 1px solid var(--app-border-color);
+}
+
+#main-frame {
+    flex-grow: 1;
+    background-color: var(--frame-background);
+    padding: 20px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-frame-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid var(--app-border-color);
+    flex-wrap: wrap;
+}
+
+.main-frame-header h2 {
+    margin: 0;
+    color: var(--interactive-accent-color);
+    margin-right: auto;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-left: 20px;
+}
+
+.sort-options, .export-options {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+.sort-options label {
+    margin-right: 5px;
+    font-size: 0.9em;
+}
+
+.sort-options select {
+    padding: 5px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--app-border-color);
+    font-size: 0.9em;
+    background-color: var(--frame-background);
+    color: var(--app-text-primary);
+}
+body.dark-theme .sort-options select option {
+    background-color: var(--dynamic-content-background);
+    color: var(--app-text-primary);
+}
+
+
+.header-button {
+    padding: 6px 12px;
+    font-size: 0.9em;
+    background-color: var(--interactive-accent-color);
+    color: var(--button-primary-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.header-button:hover {
+    background-color: color-mix(in srgb, var(--interactive-accent-color) 85%, black);
+}
+body.dark-theme .header-button:hover {
+    background-color: color-mix(in srgb, var(--interactive-accent-color) 85%, white);
+}
+
+
+.prompt-list-area {
+    flex-grow: 1;
+}
+
+.prompt-item {
+    background-color: var(--prompt-item-background);
+    border: 1px solid var(--app-border-color);
+    border-left: 4px solid var(--prompt-item-border-left-color);
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    transition: box-shadow 0.2s ease;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+body.dark-theme .prompt-item {
+    box-shadow: 0 1px 3px rgba(255,255,255,0.03);
+}
+
+
+.prompt-item:hover {
+    box-shadow: var(--app-shadow);
+}
+
+.prompt-item h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--app-text-primary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.prompt-item-meta {
+    font-size: 0.85em;
+    color: var(--app-text-secondary);
+    margin-bottom: 10px;
+}
+.prompt-item-meta span {
+    margin-right: 15px;
+}
+.prompt-item-meta .tag {
+    background-color: var(--app-text-secondary);
+    color: var(--frame-background);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+.prompt-item-content {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    max-height: 100px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: pre-wrap;
+}
+.prompt-item-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.prompt-item-actions button {
+    background-color: var(--button-primary-background);
+    color: var(--button-primary-text);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 0.8em;
+    transition: opacity 0.2s ease;
+}
+.prompt-item-actions button.delete {
+    background-color: var(--button-delete-background);
+}
+.prompt-item-actions button.ai-improve {
+    background-color: var(--button-ai-background);
+}
+.prompt-item-actions button:hover {
+    opacity: 0.8;
+}
+
+
+#dynamic-content-area {
+    padding: 20px;
+    border: 1px dashed var(--app-border-color);
+    border-radius: 4px;
+    background-color: var(--dynamic-content-background);
+}
+#dynamic-content-area h3 { /* General h3 for dynamic content area titles like "Settings", "Knowledge Base" */
+    margin-top: 0;
+    margin-bottom: 20px; /* Added more space below h3 */
+    color: var(--interactive-accent-color);
+    padding-bottom: 10px; /* Added padding below h3 */
+    border-bottom: 1px solid var(--app-border-color); /* Added border below h3 */
+}
+#dynamic-content-area h4.settings-subtitle,
+#dynamic-content-area h4.admin-panel-subtitle {
+    margin-top: 25px;
+    margin-bottom: 10px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--app-border-color);
+    color: var(--app-text-primary);
+    font-size: 1.1em;
+}
+#dynamic-content-area label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+#dynamic-content-area input[type="text"],
+#dynamic-content-area input[type="url"],
+#dynamic-content-area input[type="password"],
+#dynamic-content-area textarea,
+#dynamic-content-area select {
+    width: calc(100% - 22px);
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid var(--app-border-color);
+    border-radius: 4px;
+    font-size: 1em;
+    box-sizing: border-box;
+    background-color: var(--frame-background);
+    color: var(--app-text-primary);
+}
+body.dark-theme #dynamic-content-area input[type="text"]::placeholder,
+body.dark-theme #dynamic-content-area input[type="url"]::placeholder,
+body.dark-theme #dynamic-content-area input[type="password"]::placeholder,
+body.dark-theme #dynamic-content-area textarea::placeholder {
+    color: var(--app-text-secondary);
+}
+body.dark-theme #dynamic-content-area select option {
+    background-color: var(--dynamic-content-background);
+    color: var(--app-text-primary);
+}
+
+
+#dynamic-content-area textarea {
+    min-height: 150px;
+    resize: vertical;
+    white-space: pre-wrap;
+}
+#dynamic-content-area button[type="submit"],
+#dynamic-content-area button[type="button"] {
+    padding: 10px 20px;
+    background-color: var(--button-primary-background);
+    color: var(--button-primary-text);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1em;
+    margin-right: 10px;
+    transition: background-color 0.3s ease;
+}
+#dynamic-content-area button[type="button"].test-ai-button {
+    background-color: var(--button-test-background);
+    color: var(--text-button-test);
+}
+#dynamic-content-area button[type="button"].test-ai-button:hover {
+    background-color: color-mix(in srgb, var(--button-test-background) 85%, black);
+}
+body.dark-theme #dynamic-content-area button[type="button"].test-ai-button:hover {
+     background-color: color-mix(in srgb, var(--button-test-background) 85%, white);
+}
+
+#dynamic-content-area button[type="submit"]:hover,
+#dynamic-content-area button[type="button"]:not(.test-ai-button):hover {
+    background-color: color-mix(in srgb, var(--button-primary-background) 85%, black);
+}
+body.dark-theme #dynamic-content-area button[type="submit"]:hover,
+body.dark-theme #dynamic-content-area button[type="button"]:not(.test-ai-button):hover {
+     background-color: color-mix(in srgb, var(--button-primary-background) 85%, white);
+}
+
+
+#dynamic-content-area input[type="file"] {
+    margin-bottom: 10px;
+    border: 1px solid var(--app-border-color);
+    border-radius: 4px;
+    padding: 8px;
+    display: block;
+    color: var(--app-text-primary);
+}
+body.dark-theme #dynamic-content-area input[type="file"] {
+    color-scheme: dark;
+    background-color: var(--frame-background);
+}
+
+/* Toggle Switch */
+.toggle-switch-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+.toggle-switch-container label { /* Label next to the toggle */
+    margin-bottom: 0;
+    margin-right: 10px;
+    font-weight: normal;
+}
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 24px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--bg-toggle-switch);
+  transition: .4s;
+  border-radius: 24px;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+input:checked + .slider {
+  background-color: var(--bg-toggle-switch-checked);
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px var(--bg-toggle-switch-checked);
+}
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+
+/* Dashboard Styles */
+.dashboard-hub-container { display: flex; flex-wrap: wrap; gap: 20px; padding-top: 10px; }
+.dashboard-card { background-color: var(--bg-dashboard-card); border: 1px solid var(--border-dashboard-card); border-radius: 8px; padding: 20px; flex: 1 1 300px; min-width: 250px; box-shadow: var(--app-shadow); cursor: pointer; transition: transform 0.2s ease, box-shadow 0.2s ease; text-align: center; }
+.dashboard-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-dashboard-card-hover); }
+.dashboard-card-icon { font-size: 2.5em; color: var(--text-dashboard-card-icon); margin-bottom: 15px; display: block; }
+.dashboard-card h3 { margin-top: 0; margin-bottom: 10px; color: var(--interactive-accent-color); }
+.dashboard-card p { font-size: 0.9em; color: var(--app-text-secondary); line-height: 1.5; }
+.dashboard-content { }
+.dashboard-section { margin-bottom: 30px; padding: 15px; background-color: var(--dynamic-content-background); border: 1px solid var(--app-border-color); border-radius: 6px; }
+.dashboard-section h4 { margin-top: 0; margin-bottom: 15px; color: var(--interactive-accent-color); border-bottom: 1px solid var(--app-border-color); padding-bottom: 10px; }
+.metrics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 15px; margin-bottom: 20px; }
+.metric-card { background-color: var(--bg-metric-card); padding: 15px; border-radius: 6px; border: 1px solid var(--border-metric-card); text-align: center; box-shadow: 0 1px 3px rgba(0,0,0,0.04); }
+body.dark-theme .metric-card { box-shadow: 0 1px 3px rgba(255,255,255,0.02); }
+.metric-card .value { font-size: 2em; font-weight: bold; color: var(--interactive-accent-color); display: block; margin-bottom: 5px; }
+.metric-card .label { font-size: 0.9em; color: var(--app-text-secondary); }
+.dashboard-list { list-style: none; padding: 0; }
+.dashboard-list li { padding: 8px 0; border-bottom: 1px solid var(--app-border-color); font-size: 0.95em; }
+.dashboard-list li:last-child { border-bottom: none; }
+.dashboard-list li .prompt-title { font-weight: bold; color: var(--app-text-primary); }
+.dashboard-list li .prompt-detail { font-size: 0.85em; color: var(--app-text-secondary); margin-left: 5px; }
+.dashboard-list.tag-list .tag {
+    background-color: var(--app-text-secondary);
+    color: var(--frame-background);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 3px;
+}
+
+/* Styles for Rating Distribution Chart */
+.rating-chart {
+    padding: 10px;
+}
+.rating-bar-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 0.9em;
+}
+.rating-bar-label {
+    width: 80px;
+    color: #ffc107; /* Gold color for star labels */
+    font-weight: bold;
+    flex-shrink: 0;
+}
+.rating-bar-container {
+    flex-grow: 1;
+    background-color: var(--bg-metric-card);
+    border-radius: 4px;
+    overflow: hidden;
+    height: 20px;
+}
+.rating-bar {
+    background-color: var(--interactive-accent-color);
+    height: 100%;
+    transition: width 0.5s ease-in-out;
+    white-space: nowrap;
+    color: var(--button-primary-text);
+    font-size: 0.8em;
+    line-height: 20px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+.rating-bar-count {
+    width: 100px;
+    text-align: right;
+    color: var(--app-text-secondary);
+    padding-left: 10px;
+    flex-shrink: 0;
+}
+
+/* NEW: Styles for dashboard prompt lists */
+.dashboard-prompt-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.dashboard-prompt-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: 1px solid var(--app-border-color);
+    font-size: 0.9em;
+}
+.dashboard-prompt-list li:last-child {
+    border-bottom: none;
+}
+.dashboard-prompt-list .prompt-info {
+    flex-grow: 1;
+}
+.dashboard-prompt-list .prompt-title {
+    font-weight: 600;
+    color: var(--app-text-primary);
+    display: block;
+}
+.dashboard-prompt-list .prompt-stats {
+    font-size: 0.85em;
+    color: var(--app-text-secondary);
+}
+.dashboard-prompt-list .prompt-stats .stat-rating {
+    color: #ffc107;
+    margin-right: 10px;
+}
+.dashboard-prompt-list .view-prompt-btn {
+    padding: 4px 8px;
+    font-size: 0.8em;
+    margin-left: 15px;
+    flex-shrink: 0;
+}
+
+
+/* Loading Indicator Styles */
+.loading-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); display: flex; align-items: center; justify-content: center; z-index: 2000; }
+.loading-box { background-color: var(--bg-loading-box); padding: 25px 35px; border-radius: 8px; box-shadow: var(--shadow-loading-box); text-align: center; color: var(--text-loading-box); border: 1px solid var(--border-loading-box); }
+.loading-box p { margin-bottom: 15px; font-size: 1.1em; }
+.spinner { border: 4px solid var(--app-border-color); border-top: 4px solid var(--interactive-accent-color); border-radius: 50%; width: 30px; height: 30px; animation: spin 1s linear infinite; margin: 0 auto; }
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+
+
+#bottom-frame { height: var(--footer-height); background-color: var(--app-text-primary); color: var(--app-background); display: flex; align-items: center; justify-content: space-between; padding: 0 20px; font-size: 0.85em; border-top: 1px solid var(--border-footer-top); }
+.rss-feed-placeholder span { margin-left: 10px; opacity: 0.7; }
+
+/* Utility */
+.hidden { display: none !important; }
+
+#ai-suggestion-note { font-style: italic; font-size: 0.9em; color: var(--text-secondary); margin-bottom: 10px; padding: 8px; background-color: color-mix(in srgb, var(--button-ai-background) 15%, transparent); border-left: 3px solid var(--button-ai-background); border-radius: 3px; }
+
+/* Admin Panel Styles */
+.admin-section { background-color: var(--bg-admin-section); padding: 15px; margin-bottom: 20px; border: 1px solid var(--border-admin-section); border-radius: 6px; }
+.admin-section h5 { margin-top: 0; color: var(--interactive-accent-color); }
+.admin-section label { font-weight: normal; }
+#default-prompts-editor { width: 100%; min-height: 200px; font-family: monospace; white-space: pre; background-color: var(--frame-background); color: var(--app-text-primary); border: 1px solid var(--app-border-color); padding: 10px; box-sizing: border-box; }
+#audit-log-viewer, #content-audit-results { max-height: 400px; overflow-y: auto; border: 1px solid var(--app-border-color); padding: 10px; background-color: var(--bg-frame); border-radius: 4px; }
+.audit-log-entry, .audit-result-item { background-color: var(--bg-audit-log-entry); padding: 8px; margin-bottom: 8px; border: 1px solid var(--border-audit-log-entry); border-radius: 3px; font-size: 0.9em; }
+.audit-log-entry p, .audit-result-item p { margin: 3px 0; }
+.audit-log-entry strong, .audit-result-item strong { color: var(--app-text-primary); }
+.audit-result-item .snippet { font-style: italic; color: var(--app-text-secondary); background-color: var(--hover-background); padding: 2px 4px; border-radius: 2px; display: inline-block; margin-left: 5px; }
+.audit-log-header { font-weight: bold; padding: 10px; background-color: var(--bg-audit-log-header); border-bottom: 1px solid var(--app-border-color); margin-bottom: 10px; }
+#admin-panel-nav { margin-bottom: 20px; border-bottom: 1px solid var(--app-border-color); padding-bottom: 10px; }
+#admin-panel-nav button { margin-right: 10px; padding: 8px 12px; }
+
+/* AI Connection Status */
+#ai-connection-status {
+    padding: 8px 12px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    text-align: center;
+}
+#ai-connection-status.status-success {
+    background-color: var(--bg-connection-status-success);
+    color: var(--text-connection-status-success);
+    border: 1px solid var(--border-connection-status-success);
+}
+#ai-connection-status.status-error {
+    background-color: var(--bg-connection-status-error);
+    color: var(--text-connection-status-error);
+    border: 1px solid var(--border-connection-status-error);
+}
+#ai-connection-status.status-neutral {
+    background-color: var(--bg-connection-status-neutral);
+    color: var(--text-connection-status-neutral);
+    border: 1px solid var(--border-connection-status-neutral);
+}
+
+/* Knowledge Base & Tips Specific Styles */
+.kb-article, .tip-article {
+    background-color: var(--prompt-item-background); /* Using prompt item background for consistency */
+    border: 1px solid var(--app-border-color);
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+body.dark-theme .kb-article, body.dark-theme .tip-article {
+    box-shadow: 0 1px 3px rgba(255,255,255,0.03);
+}
+
+
+.kb-article h4, .tip-article h4 { /* Title of the article/tip */
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: var(--interactive-accent-color);
+    font-size: 1.2em;
+}
+
+.kb-category, .tip-category, .kb-tags, .tip-keywords, .kb-meta {
+    font-size: 0.85em;
+    color: var(--app-text-secondary);
+    margin-bottom: 10px;
+}
+
+.kb-content p, .kb-content ul, .kb-content h3, .kb-content h4, .tip-content p { /* Combined for KB and Tip content */
+    margin-bottom: 10px;
+    line-height: 1.6;
+    color: var(--app-text-primary);
+}
+.kb-content ul { /* Specific to KB lists */
+    padding-left: 20px;
+    list-style-type: disc;
+}
+.kb-content ul li {
+    margin-bottom: 5px;
+}
+
+.kb-content img { /* Styling for images within knowledge base */
+    max-width: 100%;
+    height: auto;
+    margin: 15px 0;
+    border-radius: 4px;
+    border: 1px solid var(--app-border-color);
+    display: block;
+}
+
+
+.kb-tags .tag, .tip-keywords .tag {
+    background-color: var(--secondary-color);
+    color: var(--button-primary-text);
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 0.8em;
+    margin-right: 5px;
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+/* Ensure error message styling is consistent for KB/Tips loading errors */
+/* .error-message is already defined, but if specific styling for KB/Tips error is needed: */
+#dynamic-content-area > .error-message { /* More specific if error is direct child of dynamic area */
+    margin: 20px 0; /* Give it some space if it's the only thing showing */
+}
+
+/* style.css Additions/Modifications for Top Search Bar */
+
+#top-search-container {
+    display: flex; /* Using flex to align with other header items if any */
+    align-items: center;
+    /* margin-right: 15px; */ /* Add if needed for spacing */
+}
+
+#top-search-input {
+    padding: 6px 10px;
+    border: 1px solid var(--app-border-color);
+    border-radius: 4px;
+    font-size: 0.9em;
+    min-width: 250px; /* Adjust as needed */
+    /* width: 100%; */ /* Or set a fixed/min-width */
+    background-color: var(--frame-background);
+    color: var(--app-text-primary);
+    box-sizing: border-box; /* Good practice for inputs */
+}
+
+body.dark-theme #top-search-input {
+    background-color: var(--dynamic-content-background);
+    color: var(--app-text-primary);
+}
+body.dark-theme #top-search-input::placeholder {
+    color: var(--app-text-secondary);
+}
+
+/* Adjust .header-actions if necessary to accommodate the search bar */
+.main-frame-header .header-actions {
+    /* display: flex; */ /* Already should be flex */
+    /* align-items: center; */ /* Already should be */
+    /* gap: 15px; */ /* Existing gap */
+    flex-grow: 1; /* Allow it to take available space if search is large */
+    justify-content: flex-end; /* Align items to the right */
+}
+
+/* UPDATED STYLES FOR 5-STAR RATING */
+.prompt-rating {
+    display: inline-flex;
+    flex-direction: row-reverse; /* This makes the stars fill from the right */
+    justify-content: flex-end;
+    margin-left: auto; /* Pushes the rating to the right of the title */
+    padding-left: 20px;
+}
+
+.prompt-rating .star {
+    font-size: 1.5em;
+    color: #ccc; /* Default color for an unrated star */
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.prompt-rating:hover .star {
+    color: gold;
+}
+
+.prompt-rating .star:hover ~ .star {
+    color: gold;
+}
+
+/* This is the key change: a more specific rule for rated stars */
+.prompt-rating .star.rated,
+.prompt-rating .star.rated ~ .star {
+    color: #ffc107; /* A slightly richer gold color */
+}
+
+/* Override hover effect for unrated stars when a rating is set */
+.prompt-rating.has-rating:hover .star:not(.rated) {
+    color: #ccc;
+}
+.prompt-rating.has-rating .star:not(.rated):hover,
+.prompt-rating.has-rating .star:not(.rated):hover ~ .star {
+    color: gold;
+}
